@@ -46,7 +46,7 @@ public:
   inline dtVec() = default;
   inline dtVec(float f0, float f1, float f2, float f3) : m_value(_mm_setr_ps(f0,f1,f2,f3)) {}
 
-  // Implicit conversions (so float can be converted to dtVec):
+  // Implicit conversions (so __m128 can be converted to dtVec):
   inline dtVec(float f) : m_value(_mm_set1_ps(f)) {}
   inline dtVec(const __m128& rhs) : m_value(rhs) {}
 
